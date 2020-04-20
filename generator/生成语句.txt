@@ -1,0 +1,7 @@
+java -jar mybatis-generator-core-1.3.2.jar -configfile generator.xml -overwrite
+curl http://localhost:9090/test/validate.json/?id=1&msg=abc
+curl http://localhost:9090/sys/dept/save.json\?name\=技术部\&seq\=1\&rem\=技术部
+curl -d "id=111&msg=123123" http://localhost:9090/test/validate.json
+curl -d "name=技术部&seq=1&remark=技术部" http://localhost:9090/sys/dept/save.json
+set global time_zone = '+8:00';
+insert into sys_dept(name,seq,remark) values (“宣传部”，2，“宣传部”)；

@@ -7,6 +7,17 @@
         <setting name="safeRowBoundsEnabled" value="true"/>
         <setting name="cacheEnabled" value="false"/>
         <setting name="useGeneratedKeys" value="true"/>
+        <!-- 使用 JDBC 的 getGeneratedKeys 获取数据库自增主键值 -->
+        <setting name="useGeneratedKeys" value="true"/>
+
+        <!-- 使用列别名替换列名 默认：true
+                Example: select name as title（实体中的属性名是title）from table ;
+                开启别名替换后，Mybatis 会自动把表中的 name 的值赋值给实体 title 的属性中 -->
+        <setting name="useColumnLabel" value="trye" />
+
+        <!-- 开启驼峰命名转换 : Table(create_time) -> Entity(createTime) -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+
     </settings>
 
     <!--<typeAliases>
